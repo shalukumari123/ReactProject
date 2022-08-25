@@ -5,7 +5,7 @@ import Dashboard from '../Dashboard';
 
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(null);
-
+  // const [first, setfirst] = useState("shalu");//static value
   useEffect(() => {
     setIsAuthenticated(JSON.parse(localStorage.getItem('is_authenticated')));
   }, []);
@@ -22,3 +22,5 @@ const App = () => {
 };
 
 export default App;
+
+//key name-is_authenticated

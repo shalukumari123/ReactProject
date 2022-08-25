@@ -33,7 +33,8 @@ const Edit = ({ employees, selectedEmployee, setEmployees, setIsEditing }) => {
 
     for (let i = 0; i < employees.length; i++) {
       if (employees[i].id === id) {
-        employees.splice(i, 1, employee);
+        employees.splice(i, 1, employee); 
+        //spice(from where to start,how many to remove,what to add)
         break;
       }
     }

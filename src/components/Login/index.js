@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 
-const Login = ({ setIsAuthenticated }) => {
-  const adminEmail = 'admin@example.com';
-  const adminPassword = 'qwerty';
+const Login = ({ setIsAuthenticated }) => { //catched prop
+  const adminEmail = 'shalu@gmail.com';
+  const adminPassword = 'shalu';
 
-  const [email, setEmail] = useState('admin@example.com');
-  const [password, setPassword] = useState('qwerty');
+  const [email, setEmail] = useState('shalu@gmail.com');
+  const [password, setPassword] = useState('shalu');
 
   const handleLogin = e => {
-    e.preventDefault();
+    e.preventDefault(); //onclick,event listner
 
     if (email === adminEmail && password === adminPassword) {
       Swal.fire({
@@ -49,25 +49,29 @@ const Login = ({ setIsAuthenticated }) => {
     }
   };
 
+  const shalu=(e)=>{
+    const pankaj=e.target.value;
+    setEmail(pankaj)
+  };
   return (
     <div className="small-container">
-      <form onSubmit={handleLogin}>
+      <form onSubmit={handleLogin}>  
         <h1>Admin Login</h1>
         <label htmlFor="email">Email</label>
         <input
           id="email"
           type="email"
           name="email"
-          placeholder="admin@example.com"
+          placeholder="shalu@gmail.com"
           value={email}
-          onChange={e => setEmail(e.target.value)}
+          onChange={shalu}
         />
         <label htmlFor="password">Password</label>
         <input
           id="password"
           type="password"
           name="password"
-          placeholder="qwerty"
+          placeholder="shalu"
           value={password}
           onChange={e => setPassword(e.target.value)}
         />
